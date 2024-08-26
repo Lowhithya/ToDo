@@ -38,8 +38,7 @@ def logoutView(request):
     return redirect('login')
 
 def register(request):
-    if request.user.is_authenticated:
-        return redirect('home-page')
+
     if request.method == 'POST':
         username = request.POST.get('username')
         email = request.POST.get('email')
